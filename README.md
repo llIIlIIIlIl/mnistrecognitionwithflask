@@ -4,7 +4,13 @@ Small dockerized python script that solves the well known MNIST digit recognitio
 Shows solvers basic knowledge of Docker, web applications and machine learning. 
 
 ## Documentation
-.
-.
+
+### Run locally 
+sudo docker run -p 5000:5000 -tagname
+
+### Run with docker-compose
+docker-compose up
+
+
 .
 .
