@@ -24,7 +24,7 @@ def train_model_on_default():
     return clf.score(X_test,y_test)
 
 def train_optimized_model():
-    # hyperparamater tuning
+    #parameters for tuning
     random_grid = {'n_estimators': [10,20,50,100],
                 'max_features': ['auto', 'sqrt'],
                 'min_samples_split': [2, 5, 10],
@@ -34,7 +34,7 @@ def train_optimized_model():
     #1 iteration in order to avoid long training time for this demo
     rf_random = RandomizedSearchCV(estimator=RandomForestClassifier(), param_distributions = random_grid,n_iter=1)
     rf_random.fit(X_train,y_train)
-    print("Best params are :",rf_random.best_params_)
+    print("Best params are (problably not the best params):",rf_random.best_params_)
     clf= rf_random.best_estimator_
     return clf.score(X_test,y_test)
 
